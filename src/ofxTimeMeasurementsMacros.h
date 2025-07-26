@@ -186,7 +186,7 @@
 
 //auto measurement naming
 
-#ifndef TARGET_WIN32
+#if !defined(TARGET_WIN32) && !defined(TARGET_OS_IOS)
 inline std::string demangledTypeInfoName(const std::type_info&ti){
 
 	char demangleBuffer[128];
